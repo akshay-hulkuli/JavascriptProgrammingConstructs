@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<script>
+    console.log("Think of a number between 1 to 100");
+
+    let low = 1;
+    let high = 100;
+
+    const question1 = "IS THE NUMBER ";
+    const question2 = "IS IT LESSTHAN ";
+
+    while(low<= high){
+        let mid = Math.floor((low + high)/2);
+        if(confirm(question1+" "+ mid)){
+            alert("we found the number");
+            break;
+        }
+        else if(confirm(question2+" "+ mid)){
+            high = mid-1;
+        }
+        else{
+            low = mid+1;
+        }
+    }
+</script>
